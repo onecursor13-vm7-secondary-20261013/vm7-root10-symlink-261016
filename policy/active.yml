@@ -1,0 +1,10 @@
+pull_request_rules:
+  - name: Root10 exact-current config-integrity guard
+    conditions:
+      - base = master
+      - author = onecursor13-vm7-primary-20261012
+      - title ~= ^VM7_ROOT10_
+      - -mergify-configuration-changed
+    actions:
+      merge:
+        method: merge
